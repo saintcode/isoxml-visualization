@@ -209,6 +209,10 @@ export function TimeLogEntity({ timeLogId, isMergedTimeLog }: TimeLogEntityProps
         realTimeLogs = getTimeLogsWithData(task)
     }
 
+    console.log('valuesInfo: ', valuesInfo)
+    // console.log('timeLogs: ', timeLogs)
+
+
     return (<>
         <EntityTitle
             title={isMergedTimeLog ? 'Merged TimeLog' : `TimeLog ${timeLogId}`}
