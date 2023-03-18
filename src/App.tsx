@@ -30,7 +30,7 @@ function App() {
             <CssBaseline />
             <Box sx={{ width: '100%', height: '100%', display: 'flex' }}>
                 <Box sx={{
-                    width: '300px',
+                    width: '500px',
                     borderRight: '1px solid gray'
                 }}>
                     <MainPanel />

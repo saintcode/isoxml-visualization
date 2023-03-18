@@ -209,10 +209,6 @@ export function TimeLogEntity({ timeLogId, isMergedTimeLog }: TimeLogEntityProps
         realTimeLogs = getTimeLogsWithData(task)
     }
 
-    console.log('valuesInfo: ', valuesInfo)
-    // console.log('timeLogs: ', timeLogs)
-
-
     return (<>
         <EntityTitle
             title={isMergedTimeLog ? 'Merged TimeLog' : `TimeLog ${timeLogId}`}
@@ -259,6 +255,14 @@ export function TimeLogEntity({ timeLogId, isMergedTimeLog }: TimeLogEntityProps
                     onChange={handleFillMissingValues}
                     label="Fill missing values"
                 />
+                {timeLogInfo.timeLogs.map((info, ind) => (
+                    <div className="input-label" key={ind}>
+                        <b>{ind}</b>
+                        <pre>
+                            {JSON.stringify(info, null, 2)}
+                        </pre>
+                    </div>
+                ))}
                 {isMergedTimeLog && (
                     <Box sx={{ml: 1, mt: 0.5}}>
                         {realTimeLogs.map(timeLog => {
