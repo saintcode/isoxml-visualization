@@ -85,7 +85,7 @@ export function MainPanel() {
                         All your data will stay <br/> inside your browser!
                     </Typography>
                     <Button
-                        href="https://github.com/aparshin/isoxml-visualization"
+                        href="https://github.com/saintcode/isoxml-visualization"
                         target="_blank"
                         size="small"
                         startIcon={<GithubIcon />}
