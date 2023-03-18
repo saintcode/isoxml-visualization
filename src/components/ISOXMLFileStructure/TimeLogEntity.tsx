@@ -257,9 +257,11 @@ export function TimeLogEntity({ timeLogId, isMergedTimeLog }: TimeLogEntityProps
                 />
                 {timeLogInfo.timeLogs.map((info, ind) => (
                     <div className="input-label" key={ind}>
-                        <b>{ind}</b>
                         <pre>
-                            {JSON.stringify(info, null, 2)}
+                            <small>
+                                <b>{ind} {'=>'} </b>
+                                {JSON.stringify(info, null, 2)}
+                            </small>
                         </pre>
                     </div>
                 ))}
